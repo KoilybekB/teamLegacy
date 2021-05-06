@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+
+  postgres-sm-bcc-local:
+    image: postgres:12
+    container_name: postgres-sm-bcc-local
+    restart: on-failure
+    environment:
+      POSTGRES_DB: sm
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data/postgres/data:/var/lib/postgresql/data
+
