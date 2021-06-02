@@ -1,7 +1,6 @@
 package bcc.kz.legasy.schoolmiras.service;
 
 import bcc.kz.legasy.schoolmiras.model.Lessons;
-import bcc.kz.legasy.schoolmiras.model.Roles;
 
 import java.util.List;
 

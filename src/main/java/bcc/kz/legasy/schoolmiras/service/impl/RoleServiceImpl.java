@@ -1,9 +1,8 @@
 package bcc.kz.legasy.schoolmiras.service.impl;
 
-import bcc.kz.legasy.schoolmiras.model.Roles;
-import bcc.kz.legasy.schoolmiras.model.Staff;
-import bcc.kz.legasy.schoolmiras.repository.RolesRepository;
-import bcc.kz.legasy.schoolmiras.service.RolesService;
+import bcc.kz.legasy.schoolmiras.model.Role;
+import bcc.kz.legasy.schoolmiras.repository.RoleRepository;
+import bcc.kz.legasy.schoolmiras.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,18 +10,18 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class RolesServiceImpl implements RolesService {
+public class RoleServiceImpl implements RoleService {
     @Autowired
-    private RolesRepository rolesRepository;
+    private RoleRepository rolesRepository;
 
     @Override
-    public Roles create(Roles roles) {
+    public Role create(Role roles) {
         return rolesRepository.save(roles);
     }
 
     @Override
-    public Roles getById(Integer id) {
-        Optional<Roles> optionalRoles = rolesRepository.findById(id);
+    public Role getById(Integer id) {
+        Optional<Role> optionalRoles = rolesRepository.findById(id);
         if (optionalRoles.isPresent()) {
             return rolesRepository.findById(id).get();
         } else {
@@ -31,13 +30,13 @@ public class RolesServiceImpl implements RolesService {
     }
 
     @Override
-    public List<Roles> getAll() {
+    public List<Role> getAll() {
         return rolesRepository.findAll();
     }
 
     @Override
     public void delete(Integer id) {
-        Roles roles = getById(id);
+        Role roles = getById(id);
         if (roles != null)
             rolesRepository.delete(roles);
     }

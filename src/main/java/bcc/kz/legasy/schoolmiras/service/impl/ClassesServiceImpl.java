@@ -1,9 +1,7 @@
 package bcc.kz.legasy.schoolmiras.service.impl;
 
 import bcc.kz.legasy.schoolmiras.model.Classes;
-import bcc.kz.legasy.schoolmiras.model.Roles;
 import bcc.kz.legasy.schoolmiras.repository.ClassesRepository;
-import bcc.kz.legasy.schoolmiras.repository.RolesRepository;
 import bcc.kz.legasy.schoolmiras.service.ClassesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

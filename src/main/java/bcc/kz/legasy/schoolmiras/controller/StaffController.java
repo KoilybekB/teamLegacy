@@ -1,9 +1,7 @@
 package bcc.kz.legasy.schoolmiras.controller;
 
 import bcc.kz.legasy.schoolmiras.model.Staff;
-import bcc.kz.legasy.schoolmiras.model.Users;
 import bcc.kz.legasy.schoolmiras.service.StaffService;
-import bcc.kz.legasy.schoolmiras.service.UsersService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
