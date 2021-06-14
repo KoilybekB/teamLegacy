@@ -11,7 +11,6 @@ import java.util.List;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
-@RestController
 @RequestMapping(value = "/api/private/v1/classes", produces = APPLICATION_JSON_VALUE)
 public class ClassesController {
     @Autowired

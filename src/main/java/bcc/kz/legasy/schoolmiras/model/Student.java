@@ -24,19 +24,19 @@ public class Student {
     @Column(name = "status")
     private Integer status;
     @Column(name = "user_id")
-    private Integer user_id;
+    private Integer userId;
     @Column(name = "idn")
     private String idn;
     @Column(name = "last_name")
-    private String last_name;
+    private String lastName;
     @Column(name = "first_name")
-    private String first_name;
+    private String firstName;
     @Column(name = "birthdate")
     private Date birthdate;
     @Column(name = "address")
     private String address;
     @Column(name = "phone_number")
-    private String phone_number;
+    private String phoneNumber;
     @Column(name = "sex")
     private Integer sex;
 }

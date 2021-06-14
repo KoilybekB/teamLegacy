@@ -39,4 +39,6 @@ public class Staff {
     private String phoneNumber;
     @Column(name = "sex")
     private Integer sex;
+    @Column(name = "position")
+    private String position;
 }

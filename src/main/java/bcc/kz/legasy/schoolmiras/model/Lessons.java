@@ -22,8 +22,8 @@ public class Lessons {
     private Integer id;
     @Column(name = "lesson_time")
     private Double lesson_time;
-    @Column(name = "plan_id")
-    private Integer plan_id;
+    @Column(name = "subject_id")
+    private Integer subject_id;
     @Column(name = "teacher_id")
     private Integer teacher_id;
     @Column(name = "class_id")

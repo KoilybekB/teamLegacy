@@ -34,7 +34,7 @@ public class User implements UserDetails{
     @Column(name = "login")
     private String login;
     @Column(name = "passwd")
-    private String passwd;
+    private String password;
     @Column(name = "status")
     private Integer status;
 
@@ -46,7 +46,7 @@ public class User implements UserDetails{
 
     @Override
     public String getPassword() {
-        return passwd;
+        return password;
     }
 
     @Override

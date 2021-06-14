@@ -13,7 +13,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private UserServiceImpl usersService;
+    private UserServiceImpl userService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -21,8 +21,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/auth/**").permitAll()
-                .antMatchers("/api/private/v1/**").permitAll()
-                .antMatchers("/api/private/v1/room/**").hasAuthority("TEACHER")
+//                .antMatchers("/api/private/v1/**").permitAll()
+//                .antMatchers("/api/private/v1/room/**").hasAuthority("ADMIN")
 //                .antMatchers("/users/create").hasAuthority("ADMIN")
                 .antMatchers("/v2/api-docs",
                         "/configuration/ui",
@@ -51,7 +51,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(usersService)
+        auth.userDetailsService(userService)
                 .passwordEncoder(passwordEncoder());
     }
 }

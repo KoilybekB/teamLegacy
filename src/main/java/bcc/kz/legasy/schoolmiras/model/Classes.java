@@ -21,7 +21,7 @@ public class Classes {
     @Column(name = "id")
     private Integer id;
     @Column(name = "class")
-    private Integer class_;
+    private Integer classs;
     @Column(name = "suffix")
     private String suffix;
     @Column(name = "status")

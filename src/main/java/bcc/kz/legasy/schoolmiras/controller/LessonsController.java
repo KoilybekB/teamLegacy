@@ -1,8 +1,6 @@
 package bcc.kz.legasy.schoolmiras.controller;
 
-import bcc.kz.legasy.schoolmiras.model.Classes;
 import bcc.kz.legasy.schoolmiras.model.Lessons;
-import bcc.kz.legasy.schoolmiras.service.ClassesService;
 import bcc.kz.legasy.schoolmiras.service.LessonsService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +11,6 @@ import java.util.List;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
-@RestController
 @RequestMapping(value = "/api/private/v1/lessons", produces = APPLICATION_JSON_VALUE)
 public class LessonsController {
     @Autowired
