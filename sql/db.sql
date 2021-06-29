@@ -138,3 +138,22 @@ create table user_rights
 
 alter table user_rights
     owner to admin;
+
+create table diary
+(
+    id      integer not null
+        constraint diary_pk
+            primary key,
+    student_id integer
+            references student
+            on delete set null,
+    lesson_id integer
+            references lessons
+            on delete set null,
+    description  varchar(200),
+    mark    integer,
+    status  integer
+);
+
+alter table diary
+    owner to admin;

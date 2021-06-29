@@ -39,4 +39,6 @@ public class Student {
     private String phoneNumber;
     @Column(name = "sex")
     private Integer sex;
+    @Column(name = "class_id")
+    private Integer class_id;
 }
